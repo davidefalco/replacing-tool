@@ -1,0 +1,22 @@
+{
+    "add_to_head_queue" : {
+        "head":"<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n",
+        "queue":"\n\t</soap:Body>\n</soap:Envelope>",
+        "if_miss":"soap",
+        "and": {
+            "if_not_miss" : "Fault",
+            "head" : "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n\t\t<soap:Fault>\n\t\t<faultcode>soap:Server</faultcode>\n\t\t<faultstring>SET CORRECT ERROR STRING</faultstring>\n\t\t<detail>\n",
+            "queue" : "\n\t\t</detail>\n\t\t</soap:Fault>\n\t</soap:Body>\n</soap:Envelope>"
+        }
+    },
+    "replacing": [
+        {
+            "source": "v40:",
+            "out": "ns3:"
+        },
+        {
+            "source": "v99:",
+            "out": "ns4:"
+        }
+    ]
+}
