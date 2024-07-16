@@ -1,4 +1,5 @@
 {
+    "file_extension" : "xml",
     "add_to_head_queue" : {
         "head":"<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\t<soap:Body>\n",
         "queue":"\n\t</soap:Body>\n</soap:Envelope>",

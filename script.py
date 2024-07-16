@@ -22,7 +22,7 @@ with open("./conf/replacing-settings.json", "r") as settings:
 for dirpath, dir_names, file_names in os.walk("./src/"):
     for file in file_names:
         print(os.path.join(dirpath, file))
-        if file.endswith(".xml"):
+        if file.endswith('.' + json_settings['file_extension']):
             with open(os.path.join(dirpath, file), "r+") as file_to_edit:
                 content = file_to_edit.read()
 
