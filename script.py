@@ -15,6 +15,7 @@ def replacing(src, dest, file_passed):
         replaced_file_text = re.sub(f"{src}", dest, file_text)
         file.seek(0,0)
         file.write(replaced_file_text)
+        file.truncate()
 
 with open("./conf/replacing-settings.json", "r") as settings:
     json_settings = json.load(settings)
